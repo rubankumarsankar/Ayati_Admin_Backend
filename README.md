@@ -58,3 +58,47 @@ fastapi-admin-panel/
 git clone https://github.com/rubankumarsankar/Ayati_Admin_Frontend.git
 cd fastapi-admin-panel
 ```
+
+### 2️⃣ Create and activate a virtual environment
+```bash
+python -m venv venv
+source venv/bin/activate   # On Linux/Mac
+venv\Scripts\activate      # On Windows
+
+```
+### 3️⃣ Install dependencies
+```bash
+pip install -r requirements.txt
+
+```
+### 4️⃣ Configure Environment Variables
+
+Create a .env file in the project root:
+
+```bash
+SECRET_KEY=your_secret_key
+ALGORITHM=HS256
+ACCESS_TOKEN_EXPIRE_MINUTES=30
+DATABASE_URL=mysql+pymysql://username:password@localhost:3306/admin_panel_db
+
+```
+
+### 5️⃣ Run Database Migrations (Auto-create tables)
+
+# Tables will auto-create when starting FastAPI due to SQLAlchemy
+6️⃣ Run the FastAPI server
+```bash
+uvicorn app.main:app --reload
+```
+### 🔗 API Documentation
+Once the server is running, visit:
+```bash
+Swagger UI → http://127.0.0.1:8000/docs
+
+ReDoc → http://127.0.0.1:8000/redoc
+```
+
+### 📝 Default Admin Creation
+When you register the first admin via /admins/register, it will automatically become a Super Admin.
+
+Only Super Admins can create other admins or manage employees.
