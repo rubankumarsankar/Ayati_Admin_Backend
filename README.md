@@ -30,6 +30,7 @@ This project uses **MySQL**, **SQLAlchemy ORM**, and follows best practices for 
 
 ## 📂 Project Structure
 
+```bash
 fastapi-admin-panel/
 │
 ├── app/
@@ -48,8 +49,9 @@ fastapi-admin-panel/
 ├── .gitignore # Git ignore file
 ├── README.md # Project documentation
 └── requirements.txt # Python dependencies
-
+```
 ---
+
 
 ## ⚙️ Installation & Setup
 
