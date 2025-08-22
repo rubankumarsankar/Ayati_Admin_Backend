@@ -7,6 +7,7 @@ app = FastAPI(title="Admin & Employee Management")
 
 # ✅ Allow CORS (Frontend React running on Vite)
 origins = [
+    "*",  # Vite dev server
     "http://localhost:5173",  # Vite dev server
     "http://127.0.0.1:5173",  # Sometimes Vite uses 127.0.0.1
     # Add production URL here when deploying
